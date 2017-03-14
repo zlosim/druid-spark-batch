@@ -21,12 +21,16 @@ name := "druid-spark-batch"
 
 licenses := Seq("Apache License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0"))
 homepage := Some(url("https://github.com/metamx/druid-spark-batch"))
-crossScalaVersions := Seq("2.11.7", "2.10.6")
+crossScalaVersions := Seq("2.10.5")
+
+resolvers += "MapR Repository" at "http://repository.mapr.com/maven/"
+
+// Create a dependency on bodacious.
 
 val druid_version = "0.9.2"
 // This is just used here for Path, so anything that doesn't break spark should be fine
-val hadoop_version = "2.4.0"
-val spark_version = "2.0.0"
+val hadoop_version = "2.7.0-mapr-1602"
+val spark_version = "1.6.1"
 val guava_version = "16.0.1"
 val mesos_version = "0.25.0"
 

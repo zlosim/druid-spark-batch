@@ -298,7 +298,7 @@ object SparkBatchIndexTask
       .setAppName(task.getId)
       .setMaster(task.getMaster)
       // These can screw with resource scheduling and may be worth removing
-      .set("spark.executor.memory", "7G")
+      .set("spark.executor.memory", "1G")
       .set("spark.executor.cores", "1")
       .set("spark.kryo.referenceTracking", "false")
       .set("user.timezone", "UTC")
